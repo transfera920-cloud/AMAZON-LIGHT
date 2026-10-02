@@ -514,7 +514,7 @@ export default function App() {
       {/* Hero Section with Official Chapter H1 */}
       <section className="relative overflow-hidden border-b border-border/60">
         <img
-          src="/images/hero-twilight-ridge.jpg"
+          src={`${import.meta.env.BASE_URL}images/hero-twilight-ridge.jpg`}
           alt="曙暮光下的高山稜線，隊伍以頭燈行進"
           width={1920}
           height={1088}
