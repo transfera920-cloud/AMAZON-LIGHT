@@ -1,0 +1,6 @@
+{
+  "name": "登山時間與光線風險管理教案｜亞馬遜國家山岳協會",
+  "description": "登山時間與光線風險管理教案，從曙暮光、摸早黑、摸晚黑、頭燈與照明風險，到領隊時間決策，建立高山行程中的時間與光線管理觀念。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
