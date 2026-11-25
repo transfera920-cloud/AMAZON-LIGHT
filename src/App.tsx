@@ -183,19 +183,31 @@ function StepFlow({
   const borderColor = isDanger ? 'border-danger/40' : 'border-safe/40';
 
   return (
-    <div className="surface-card p-6 print-plain">
-      <ol className="flex flex-col items-stretch gap-0">
+    <div className="surface-card p-4 md:p-5 print-plain">
+      <ol className="flex flex-col items-stretch gap-0 md:flex-row md:flex-wrap md:gap-y-2">
         {steps.map((step, idx) => (
-          <li key={step} className="flex flex-col items-center">
+          <li
+            key={step}
+            className="flex flex-col items-center md:flex-auto md:flex-row"
+          >
             <div
-              className={`w-full rounded-lg border bg-secondary/40 px-4 py-3 text-center text-sm font-medium ${borderColor}`}
+              className={`w-full rounded-lg border bg-secondary/40 px-3 py-2 text-center text-sm font-medium md:h-full md:flex-1 md:content-center ${borderColor}`}
             >
               {step}
             </div>
             {idx < steps.length - 1 && (
-              <span className={`py-1 text-lg leading-none ${textColor}`}>
-                ↓
-              </span>
+              <>
+                <span
+                  className={`py-0.5 text-base leading-none md:hidden ${textColor}`}
+                >
+                  ↓
+                </span>
+                <span
+                  className={`hidden px-2 text-lg leading-none md:inline ${textColor}`}
+                >
+                  →
+                </span>
+              </>
             )}
           </li>
         ))}
